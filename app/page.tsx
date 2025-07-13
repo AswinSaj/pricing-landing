@@ -4,6 +4,12 @@ import { SparklesCore } from "@/components/ui/sparkles";
 import { WorldMapDemo } from "@/components/Worldmap";
 import { FlipWordsDemo } from "@/components/Flipwords";
 import Image from "next/image";
+import { MetricsSection } from "@/components/MetricsSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
+import { FAQSection } from "@/components/FAQSection";
+import { Footer } from "@/components/Footer";
+import { InfiniteMovingCardsDemo } from "@/components/Infinite";
+import { CTASection } from "@/components/CTASection";
 
 export default function Home() {
   return (
@@ -23,7 +29,7 @@ export default function Home() {
         </div>
 
         <div className="relative z-20 text-center mx-auto">
-          <div className="w-full">
+          <div className="w-full pt-20">
             <FlipWordsDemo />
 
             <p className="text-2xl md:text-3xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
@@ -73,22 +79,25 @@ export default function Home() {
               />
             </ContainerScroll>
           </div>
-          <div className="features h-full w-full">
-            <div className="text-white p-10">
-              <p className="text-6xl font-bold">
+          <div className="features h-full w-full" id="features">
+            <div className="text-white p-4 sm:p-6 lg:p-10">
+              <p className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 leading-tight">
                 Everything you need to quote like a pro
               </p>
-              <p className="text-4xl ">
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-400 font-medium">
                 Powerful features designed for modern freelancers and agencies
               </p>
             </div>
             <GlowingEffectDemoSecond />
           </div>
-          <div className="w-full h-full text-white p-5 mt-10">
-            <WorldMapDemo />
-          </div>
+          <WorldMapDemo />
+          <MetricsSection />
+          <InfiniteMovingCardsDemo />
         </div>
       </div>
+      <FAQSection />
+      <CTASection />
+      <Footer />
     </div>
   );
 }

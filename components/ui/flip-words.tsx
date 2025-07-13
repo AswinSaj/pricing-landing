@@ -6,7 +6,7 @@ cn;
 
 export const FlipWords = ({
   words,
-  duration = 3000,
+  duration = 1250,
   className,
 }: {
   words: string[];
