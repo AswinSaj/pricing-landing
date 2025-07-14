@@ -10,9 +10,10 @@ export function InfiniteMovingCardsDemo() {
         What Our Users Say
       </h2>
       <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
-        Don&apos;t just take our word for it. Here's what professionals are
+        Don&apos;t just take our word for it. Here&apos;s what professionals are
         saying about PQ Pro.
       </p>
+
       <InfiniteMovingCards
         items={testimonials}
         direction="right"
@@ -31,7 +32,7 @@ const testimonials = [
   },
   {
     quote:
-      "To be, or not to be, that is the question: Whether &rsquo;tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
+      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer the slings and arrows of outrageous fortune, or to take arms against a sea of troubles, and by opposing end them: to die, to sleep.",
     name: "William Shakespeare",
     title: "Hamlet",
   },
