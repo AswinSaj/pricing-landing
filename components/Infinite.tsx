@@ -10,8 +10,8 @@ export function InfiniteMovingCardsDemo() {
         What Our Users Say
       </h2>
       <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
-        Don't just take our word for it. Here's what professionals are saying
-        about PQ Pro.
+        Don&apos;t just take our word for it. Here's what professionals are
+        saying about PQ Pro.
       </p>
       <InfiniteMovingCards
         items={testimonials}
