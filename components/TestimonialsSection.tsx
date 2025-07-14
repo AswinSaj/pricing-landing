@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { Star, Quote } from "lucide-react";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -137,7 +138,7 @@ function TestimonialCard({
     <div className="flex-shrink-0 w-full sm:w-96 sm:mx-4">
       <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-4 sm:p-6 h-full hover:bg-gray-900/70 transition-all duration-300">
         <div className="flex items-center mb-4">
-          <img
+          <Image
             src={testimonial.avatar || "/placeholder.svg"}
             alt={testimonial.name}
             className="w-10 h-10 sm:w-12 sm:h-12 rounded-full mr-3 sm:mr-4"
