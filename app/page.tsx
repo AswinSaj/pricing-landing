@@ -5,7 +5,6 @@ import { WorldMapDemo } from "@/components/Worldmap";
 import { FlipWordsDemo } from "@/components/Flipwords";
 import Image from "next/image";
 import { MetricsSection } from "@/components/MetricsSection";
-import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { FAQSection } from "@/components/FAQSection";
 import { Footer } from "@/components/Footer";
 import { InfiniteMovingCardsDemo } from "@/components/Infinite";

@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { motion } from "motion/react"
-import { Star, Quote } from "lucide-react"
+import { motion } from "motion/react";
+import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
@@ -58,11 +58,14 @@ const testimonials = [
     rating: 5,
     avatar: "/placeholder.svg?height=60&width=60",
   },
-]
+];
 
 export function TestimonialsSection() {
   return (
-    <div className="py-12 sm:py-16 lg:py-20 bg-black overflow-hidden" id="testimonials">
+    <div
+      className="py-12 sm:py-16 lg:py-20 bg-black overflow-hidden"
+      id="testimonials"
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 sm:mb-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -71,9 +74,12 @@ export function TestimonialsSection() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">What Our Users Say</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+            What Our Users Say
+          </h2>
           <p className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto">
-            Don't just take our word for it. Here's what professionals are saying about PQ Pro.
+            Don&apos;t just take our word for it. Here&apos;s what professionals
+            are saying about PQ Pro.
           </p>
         </motion.div>
       </div>
@@ -94,7 +100,10 @@ export function TestimonialsSection() {
           ))}
           {/* Duplicate set for seamless loop */}
           {testimonials.map((testimonial, index) => (
-            <TestimonialCard key={`second-${index}`} testimonial={testimonial} />
+            <TestimonialCard
+              key={`second-${index}`}
+              testimonial={testimonial}
+            />
           ))}
         </div>
       </div>
@@ -116,10 +125,14 @@ export function TestimonialsSection() {
         }
       `}</style>
     </div>
-  )
+  );
 }
 
-function TestimonialCard({ testimonial }: { testimonial: (typeof testimonials)[0] }) {
+function TestimonialCard({
+  testimonial,
+}: {
+  testimonial: (typeof testimonials)[0];
+}) {
   return (
     <div className="flex-shrink-0 w-full sm:w-96 sm:mx-4">
       <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-2xl p-4 sm:p-6 h-full hover:bg-gray-900/70 transition-all duration-300">
@@ -130,23 +143,32 @@ function TestimonialCard({ testimonial }: { testimonial: (typeof testimonials)[0
             className="w-10 h-10 sm:w-12 sm:h-12 rounded-full mr-3 sm:mr-4"
           />
           <div>
-            <h4 className="text-white font-semibold text-sm sm:text-base">{testimonial.name}</h4>
-            <p className="text-gray-400 text-xs sm:text-sm">{testimonial.role}</p>
+            <h4 className="text-white font-semibold text-sm sm:text-base">
+              {testimonial.name}
+            </h4>
+            <p className="text-gray-400 text-xs sm:text-sm">
+              {testimonial.role}
+            </p>
             <p className="text-gray-500 text-xs">{testimonial.company}</p>
           </div>
         </div>
 
         <div className="flex items-center mb-4">
           {[...Array(testimonial.rating)].map((_, i) => (
-            <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-current" />
+            <Star
+              key={i}
+              className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 fill-current"
+            />
           ))}
         </div>
 
         <div className="relative">
           <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600 mb-2" />
-          <p className="text-gray-300 leading-relaxed text-sm sm:text-base">{testimonial.content}</p>
+          <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
+            {testimonial.content}
+          </p>
         </div>
       </div>
     </div>
-  )
+  );
 }
